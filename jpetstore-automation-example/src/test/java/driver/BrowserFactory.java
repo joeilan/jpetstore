@@ -8,8 +8,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
-import org.openqa.selenium.opera.OperaOptions;
+//import org.openqa.selenium.ie.InternetExplorerOptions;
+//import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -43,7 +43,7 @@ public class BrowserFactory {
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     desiredCapabilities.merge(firefoxOptions);
                     return getRemoteWebDriver(desiredCapabilities);
-                case OPERA:
+     /*           case OPERA:
                     OperaOptions operaOptions = new OperaOptions();
                     desiredCapabilities.merge(operaOptions);
                     return getRemoteWebDriver(desiredCapabilities);
@@ -51,6 +51,8 @@ public class BrowserFactory {
                     InternetExplorerOptions internetExplorerOptions = new InternetExplorerOptions();
                     desiredCapabilities.merge(internetExplorerOptions);
                     return getRemoteWebDriver(desiredCapabilities);
+            
+                */
                 default:
                     throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
             }
