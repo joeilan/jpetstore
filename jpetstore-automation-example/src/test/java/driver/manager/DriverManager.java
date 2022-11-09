@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import static configuration.TestRunProperties.getBrowserToRun;
 import static configuration.TestRunProperties.getIsRemoteRun;
-import static driver.BrowserType.FIREFOX;
+//import static driver.BrowserType.FIREFOX;
 
 public class DriverManager {
 
@@ -27,9 +27,9 @@ public class DriverManager {
 
     public static void disposeDriver() {
         driver.close();
-        if (!getBrowserToRun().equals(FIREFOX)) {
-            driver.quit();
-        }
+   //     if (!getBrowserToRun().equals(FIREFOX)) {
+    //        driver.quit();
+  //      }
         driver = null;
     }
 }

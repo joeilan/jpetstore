@@ -5,9 +5,9 @@ import configuration.TestRunProperties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxOptions;
+//import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.openqa.selenium.ie.InternetExplorerOptions;
 //import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -39,11 +39,11 @@ public class BrowserFactory {
                     ChromeOptions chromeOptions = new ChromeOptions();
                     desiredCapabilities.merge(chromeOptions);
                     return getRemoteWebDriver(desiredCapabilities);
-                case FIREFOX:
+                    /*            case FIREFOX:
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
                     desiredCapabilities.merge(firefoxOptions);
                     return getRemoteWebDriver(desiredCapabilities);
-     /*           case OPERA:
+                case OPERA:
                     OperaOptions operaOptions = new OperaOptions();
                     desiredCapabilities.merge(operaOptions);
                     return getRemoteWebDriver(desiredCapabilities);
@@ -62,13 +62,13 @@ public class BrowserFactory {
                 case CHROME:
                     System.setProperty("webdriver.chrome.driver", LocalWebDriverProperties.getChromeWebDriverLocation());
                     return new ChromeDriver();
-                case FIREFOX:
+      /*          case FIREFOX:
                     System.setProperty("webdriver.gecko.driver", LocalWebDriverProperties.getFirefoxWebDriverLocation());
                     return new FirefoxDriver();
                 case IE:
                     System.setProperty("webdriver.ie.driver", LocalWebDriverProperties.getInternetExplorerWebDriverLocation());
                     return new InternetExplorerDriver();
-                default:
+          */      default:
                     throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
             }
         }
